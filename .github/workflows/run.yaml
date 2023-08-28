@@ -1,9 +1,18 @@
 name: learn-github-actions
 on: [push]
 jobs:
-  check-version:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "this is a pen"
-      - run: lsb_release -a
-      - run: lscpu
+    check-version:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "this is a pen"
+            - run: lsb_release -a
+            - run: lscpu
+    cpp_test:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: codes
+            - run: cd codes
+            - run: mkdir build
+            - run: cd build
+            - run: cmake ..
+            - run: make
