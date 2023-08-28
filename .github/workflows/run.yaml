@@ -1,3 +1,5 @@
+# google test: https://github.com/bastianhjaeger/github_actions_gtest_example
+# general: https://zenn.dev/hashito/articles/7c292f966c0b59
 name: learn-github-actions
 on: [push]
 jobs:
@@ -19,3 +21,4 @@ jobs:
                 cd build
                 cmake ..
                 make
+                ./google_test && ./array

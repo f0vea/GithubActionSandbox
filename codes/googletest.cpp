@@ -9,11 +9,6 @@ int func(int i)
     return i;
 }
 
-TEST(SimpleFunc, fail)
-{
-    EXPECT_EQ(1, func(3)); // 1 neq 3, this is supposed to fail
-}
-
 TEST(SimpleFunc, success)
 {
     EXPECT_EQ(1, func(1)); // 1 eq 1, this is supposed to succeed
