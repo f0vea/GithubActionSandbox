@@ -11,8 +11,9 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v3
-            - run: cd codes
-            - run: mkdir build
-            - run: cd build
-            - run: cmake ..
-            - run: make
+            - run: |
+                cd codes
+                mkdir build
+                cd build
+                cmake ..
+                make
